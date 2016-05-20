@@ -66,7 +66,7 @@ class student{
 			}
 			display += "\n";
 		}
-		display += "\nMin score is "+max;
+		display += "\nMax score is "+max;
 		JOptionPane.showMessageDialog(null,display,"Show Min",JOptionPane.INFORMATION_MESSAGE);
 	}
 }
