@@ -11,7 +11,7 @@ class student{
 			for(int j=0;j<Integer.parseInt(numberStudent);j++){
 				do{
 					inputScore = JOptionPane.showInputDialog(null,"Input score of section " + (i+1) + " student "+(j+1)+" : ");	
-				}while(!(Integer.parseInt(inputScore)<=150 && Integer.parseInt(inputScore)>=0));
+				}while(!(Integer.parseInt(inputScore)<=100 && Integer.parseInt(inputScore)>=0));
 				data[i][j] = Integer.parseInt(inputScore);
 			}
 		}
@@ -37,7 +37,7 @@ class student{
 		
 	}
 	public static void getMin(int[][] data){
-		int min =150;
+		int min =100;
 		String display = "";
 		for(int i=0;i<data.length;i++){
 			display += "Section "+(i+1)+" : ";
