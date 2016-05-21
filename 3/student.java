@@ -7,8 +7,8 @@ class student{
 			numberSection = JOptionPane.showInputDialog(null, "Enter number of Section : ");
 			numberStudent = JOptionPane.showInputDialog(null, "Enter number of Student : ");
 			data = new int[Integer.parseInt(numberSection)][Integer.parseInt(numberStudent)];
-		}while(data.length==0);
-		
+		}while(data.length==0 || data[0].length ==0);
+
 		for(int i=0;i<Integer.parseInt(numberSection);i++){
 			for(int j=0;j<Integer.parseInt(numberStudent);j++){
 				do{
