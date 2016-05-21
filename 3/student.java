@@ -1,12 +1,14 @@
-import java.util.Random;
 import javax.swing.JOptionPane;
 class student{
 	public static void main(String[] args) {
-		String numberSection = JOptionPane.showInputDialog(null, "Enter number of Section : ");
-		String numberStudent = JOptionPane.showInputDialog(null, "Enter number of Student : ");
-		String selectMenu,inputScore;
-		int[][] data = new int[Integer.parseInt(numberSection)][Integer.parseInt(numberStudent)];
-
+		String numberSection,numberStudent,selectMenu,inputScore;
+		int[][] data;
+		do{
+			numberSection = JOptionPane.showInputDialog(null, "Enter number of Section : ");
+			numberStudent = JOptionPane.showInputDialog(null, "Enter number of Student : ");
+			data = new int[Integer.parseInt(numberSection)][Integer.parseInt(numberStudent)];
+		}while(data.length==0);
+		
 		for(int i=0;i<Integer.parseInt(numberSection);i++){
 			for(int j=0;j<Integer.parseInt(numberStudent);j++){
 				do{
@@ -23,7 +25,6 @@ class student{
 					getMin(data);
 					break;
 				case "2":
-
 					getMax(data);
 					break;
 				case "0":
@@ -33,9 +34,8 @@ class student{
 					JOptionPane.showMessageDialog(null,"Don't have this menu!!!");
 			}
 		}while(selectMenu!="0");
-
-		
 	}
+
 	public static void getMin(int[][] data){
 		int min =100;
 		String display = "";
