@@ -188,7 +188,7 @@ public class testComposition extends JApplet implements ActionListener {
 				}
 				subTextArea.setText("");
 				subTextArea.append(sub);
-
+				count--;
 				JOptionPane.showMessageDialog(null,"Delete Success.");	
 				
 			}
